@@ -21,6 +21,28 @@ async function now() {
 async function forecast(){
     let data = await fetch(apiURL).then(res => res.json());
     let {forecast} = data;
+    let ul = document.querySelector(".weather__forecast");
+    let newLi = document.createElement("li");
+
+    let spanDay = document.createElement("span");
+    spanDay.classList.add("day");
+    let date = forecast.forecastday[0].date;
+    let weekday = new Date(date);
+    spanDay.innerText = weekday.toLocaleDateString("pl-PL",{weekday: 'long'});
+
+
+
+    let img = document.createElement("img");
+    let spanTemp = document.createElement("span");
+
+
+    spanTemp.classList.add("temperature");
+    spanTemp.classList.add("temperature__value");
+
+    newLi.appendChild(spanDay).appendChild(img).appendChild(spanTemp);
+    ul.appendChild(newLi);
+
+
     console.log(forecast);
 }
 
