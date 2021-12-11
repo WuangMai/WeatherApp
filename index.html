@@ -9,9 +9,10 @@
 </head>
 <body>
 <header>
+<!--    Przycisk "Dodaj miasto"-->
     <div class="container">
-        <div class="logo"><img src="assets/icons/logo.svg"/> Weather App</div>
-        <button class="btn" id="add-city">Dodaj miasto <i class="material-icons">add_circle</i></button>
+        <div class="logo"><img src="assets/icons/logo.svg"/> Aplikacja pogodowa</div>
+<!--        <button class="btn" id="add-city">Dodaj miasto <i class="material-icons">add_circle</i></button>-->
     </div>
 </header>
 
@@ -29,17 +30,12 @@
         <div class="search-error"></div>
     </div>
 
-    <!--
-       Moduł pogody
-       Poniższy kod możecie potraktować jako template do kolejnych modułów
-       Możecie go sklonować używając metody cloneNode(true), i powstawiać odpowiednie wartości z aktualnego miasta.
-    -->
     <div class="module module__weather">
-        <button class="btn btn--icon btn--close"><i class="material-icons">close</i></button>
+<!--        <button class="btn btn&#45;&#45;icon btn&#45;&#45;close"><i class="material-icons">close</i></button>-->
 
         <div class="weather">
             <div class="weather__icon">
-                <img src="assets/icons/partly-cloudy-day.svg"/></div>
+                <img src=""/></div>
 
             <div class="weather__info">
                 <div class="city">
@@ -49,30 +45,30 @@
           </span>
                 </div>
                 <div class="temperature">
-                    <span class="temperature__value">16.5</span>&deg;C
+                    <span class="temperature__value">@temp@</span>&deg;C
                 </div>
             </div>
 
             <ul class="weather__details">
-                <li><img src="assets/icons/pressure.svg"/> <span class="pressure__value">998 hPa</span></li>
-                <li><img src="assets/icons/humidity.svg"/> <span class="humidity__value">45%</span></li>
-                <li><img src="assets/icons/wind-speed.svg"/> <span class="wind-speed__value">5.5 m/s</span></li>
+                <li><img src="assets/icons/pressure.svg"/> <span class="pressure__value">error hPa</span></li>
+                <li><img src="assets/icons/humidity.svg"/> <span class="humidity__value">error%</span></li>
+                <li><img src="assets/icons/wind-speed.svg"/> <span class="wind-speed__value">error m/s</span></li>
             </ul>
 
             <ul class="weather__forecast">
                 <li>
-                    <span class="day">Wtorek</span> <img src="assets/icons/clear-day.svg"/>
-                    <span class="temperature"><span class="temperature__value">10.0</span>&deg;C</span>
+                    <span class="day">#Day1#</span> <img src=""/>
+                    <span class="temperature"><span class="temperature__value">@temp@</span>&deg;C</span>
                 </li>
 
                 <li>
-                    <span class="day">Środa</span> <img src="assets/icons/snow.svg"/>
-                    <span class="temperature"><span class="temperature__value">-2.3</span>&deg;C</span>
+                    <span class="day">#Day2#</span> <img src=""/>
+                    <span class="temperature"><span class="temperature__value">@temp@</span>&deg;C</span>
                 </li>
 
                 <li>
-                    <span class="day">Czwartek</span> <img src="assets/icons/rain.svg"/>
-                    <span class="temperature"><span class="temperature__value">4.8</span>&deg;C</span>
+                    <span class="day">#Day3#</span> <img src=""/>
+                    <span class="temperature"><span class="temperature__value">@temp@</span>&deg;C</span>
                 </li>
 
             </ul>
